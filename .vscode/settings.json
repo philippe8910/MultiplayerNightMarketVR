@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "VR_3_12.sln"
+    "dotnet.defaultSolution": "MultiplayerNightMarketVR.sln"
 }
