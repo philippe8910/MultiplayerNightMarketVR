@@ -13,9 +13,7 @@ public class SlcieTest : MonoBehaviour, IDamageable
 
     void Start()
     {
-        OnDestroyed += () => {
-            Debug.Log("Destroyed");
-        };
+        
     }
 
     public void TakeDamage(int amount)

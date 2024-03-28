@@ -26,8 +26,8 @@ public class Grabbable : MonoBehaviour
     [PunRPC]
     public void CancelGravityRPC(bool cancelGravity)
     {
+        //todo sync transform has problem
         rb.useGravity = !cancelGravity;
-
         Debug.Log("Gravity is " + (cancelGravity ? "canceled" : "enabled"));
     }
 }

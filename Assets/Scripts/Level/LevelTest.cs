@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 using Valve.VR.InteractionSystem;
 
-public class LevelTest : MonoBehaviour, IGameTrigger
+[RequireComponent(typeof(PhotonView))]
+public class LevelTest : MonoBehaviour, IGameTrigger 
 {
-    public int timeCount {get; set;}
-    public int scoreCount {get; set;}
-    public bool isGameStart {get; set;}
-    public Text timeText {get; set ;}
-    public Text scoreText {get; set;}
-    public PhotonView photonView {get => GetComponent<PhotonView>(); set => photonView = value;}
+    [SerializeField] public float timeCount {get; set;}
+    [SerializeField] public int scoreCount {get; set;}
+    [SerializeField] public bool isGameStart {get; set;}
+
+    public Text timeText;
+    public Text scoreText;
+    public PhotonView photonView {get => GetComponent<PhotonView>();}
     public TeleportPoint teleportPoint {get; set;}
 
     [PunRPC]
@@ -40,18 +43,6 @@ public class LevelTest : MonoBehaviour, IGameTrigger
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform child in transform)
-        {
-            if(child.name == "TeleportPoint")
-                teleportPoint = child.GetComponent<TeleportPoint>();
-
-            if(child.name == "TimeText")
-                timeText = child.GetComponent<Text>();
-
-            if(child.name == "ScoreText")
-                scoreText = child.GetComponent<Text>();
-        }
-
         teleportPoint.OnTeleport.AddListener(delegate {
             photonView.RPC("OnGameStart", RpcTarget.All);
         });
@@ -60,15 +51,19 @@ public class LevelTest : MonoBehaviour, IGameTrigger
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Update");
+
         if(isGameStart)
         {
-            timeCount -= (int)Time.deltaTime;
-            timeText.text = timeCount.ToString();
+            timeCount -= Time.deltaTime;
+            timeText.text = timeCount.ToString("F0");
 
             if(timeCount <= 0)
             {
                 photonView.RPC("OnGameTimeUp", RpcTarget.All);
             }
+
+            //Debug.Log("Time Count: " + timeCount);
         }
     }
 
@@ -76,11 +71,13 @@ public class LevelTest : MonoBehaviour, IGameTrigger
     public void GameStartRPC()
     {
         photonView.RPC("OnGameStart", RpcTarget.All);
+        Debug.Log("GameStartRPC");
     }
 
     [ContextMenu("GameTimeUpRPC")]
     public void GameTimeUpRPC()
     {
         photonView.RPC("OnGameTimeUp", RpcTarget.All);
+        Debug.Log("GameTimeUpRPC");
     }
 }

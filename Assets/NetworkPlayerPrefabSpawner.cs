@@ -14,6 +14,11 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        //todo this is not good to fix lag, 
+        PhotonNetwork.SendRate = 90; //Default is 30
+        PhotonNetwork.SerializationRate = 60; //5 is really laggy, jumpy. Default is 10?
+
+
         if(!PhotonNetwork.IsConnected)
         {
             SceneManager.LoadScene("Menu");
