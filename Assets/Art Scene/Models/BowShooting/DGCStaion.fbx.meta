@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b022b6d17d456940b517c2f857501aa
+guid: 675ff0a7e0b537140aaf58ccef2d8030
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light
-    second: {fileID: 2100000, guid: 29a545dcfdc6e0847adc98d6d5991e5b, type: 2}
+      name: Flag
+    second: {fileID: 2100000, guid: caa8df970e836544b94475f453b278e8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Matel
-    second: {fileID: 2100000, guid: 1ae0b7cb75acffb42a5051359ce2ddbb, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 6d60a32cba4893e4ca565910ae1b9625, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SauceBottle
+    second: {fileID: 2100000, guid: f87d5b82c4e9acf41803e451c6c0054c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShopSign
+    second: {fileID: 2100000, guid: 5f4d28c3a64172945b552f5d5429d207, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel
+    second: {fileID: 2100000, guid: e00b3105e6d5c0f4fb292ebd9426ba48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToothPick
+    second: {fileID: 2100000, guid: 104527a9a09d34f4599937f445e765bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: item
+    second: {fileID: 2100000, guid: fa6d2bc746662dc4cbcf8d6eda911543, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oil
+    second: {fileID: 2100000, guid: 6eef43a84f726fe48a5432d543d0b551, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: package
+    second: {fileID: 2100000, guid: aba815df1ef9c14429f52b1f1f9c68a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table
+    second: {fileID: 2100000, guid: 90b78abe4ff9ae74b801ad380c87a8e9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
