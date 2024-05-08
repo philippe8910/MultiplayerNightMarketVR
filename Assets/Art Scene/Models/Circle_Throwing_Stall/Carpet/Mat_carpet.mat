@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_carpet 1
+  m_Name: Mat_carpet
   m_Shader: {fileID: -6465566751694194690, guid: 35b9d5d268bff0d49b9f0e9f9e8c9fde,
     type: 3}
   m_Parent: {fileID: 0}
@@ -36,6 +36,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 88d18d3be035bef4a9d13da204a39975, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Metallic:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: 2637b74684a71f7459521150335ec0ae, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -58,10 +62,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Metallic_switch: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Main_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 0}
+    - _Main_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &591920141081949399
 MonoBehaviour:
