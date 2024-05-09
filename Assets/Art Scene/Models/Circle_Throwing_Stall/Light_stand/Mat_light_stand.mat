@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Shelves_singboard_bucket
+  m_Name: Mat_light_stand
   m_Shader: {fileID: -6465566751694194690, guid: 35b9d5d268bff0d49b9f0e9f9e8c9fde,
     type: 3}
   m_Parent: {fileID: 0}
@@ -19,7 +19,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AO:
-        m_Texture: {fileID: 2800000, guid: d6b2d139332cf0d4999f5d7a0662b055, type: 3}
+        m_Texture: {fileID: 2800000, guid: a51d9145feced8b468521c8a7a568988, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Color:
@@ -35,15 +35,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a15ebc5a30c8b3a4b8b18b28e613f82c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main:
-        m_Texture: {fileID: 2800000, guid: e10a62e3f00eda344bbd012c3d523e70, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6da442ee6e9e8445b8f2f57829b1c64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic:
-        m_Texture: {fileID: 2800000, guid: 7286cbed30bfea144891b7e63deb89e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 29c38d4e73556814e95bf155b940dbd7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 2800000, guid: e4b1123933149154dbd87543daef530e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 227ca4b839b63b94395d1b11f494eee4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
@@ -80,7 +80,7 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 10
-    - _Emission_switch: 0
+    - _Emission_switch: 1
     - _Metallic_switch: 1
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -92,7 +92,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Emission_color: {r: 0, g: 0, b: 0, a: 0}
+    - _Emission_color: {r: 1, g: 1, b: 1, a: 0}
     - _Main_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &591920141081949399
