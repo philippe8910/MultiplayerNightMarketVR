@@ -94,6 +94,14 @@ Material:
     m_Colors:
     - _Emission_color: {r: 1, g: 1, b: 1, a: 0}
     - _Main_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}
+    - _Main_offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Main_tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Metallic_offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Metallic_tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Normal_offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Normal_tiling: {r: 0, g: 0, b: 0, a: 0}
+    - _Roughness_offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Roughness_tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &591920141081949399
 MonoBehaviour:
