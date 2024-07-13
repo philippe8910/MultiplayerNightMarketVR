@@ -12,12 +12,17 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
 
     public GameObject playerPos;
 
+    public GameObject player;
+    public Transform playerSpawnPoint;
+
     private void Start()
     {
         //todo this is not good to fix lag, 
         PhotonNetwork.SendRate = 90; //Default is 30
         PhotonNetwork.SerializationRate = 60; //5 is really laggy, jumpy. Default is 10?
 
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerSpawnPoint.position;
 
         if(!PhotonNetwork.IsConnected)
         {
