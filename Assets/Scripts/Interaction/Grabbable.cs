@@ -11,6 +11,7 @@ public class Grabbable : MonoBehaviour
     private Rigidbody rb { get => GetComponent<Rigidbody>();}
     private PhotonView photonView { get => GetComponent<PhotonView>();}
 
+
     void Start()
     {
         throwable.onPickUp.AddListener(delegate {
