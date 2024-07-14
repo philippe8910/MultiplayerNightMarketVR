@@ -15,6 +15,7 @@ public class BalloonComponent : MonoBehaviour
     {
         var effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
 
+        Destroy(gameObject);
         Destroy(effect, 2f);
     }
 }
