@@ -2267,10 +2267,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4192491875905271157, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.041913934
+      objectReference: {fileID: 0}
+    - target: {fileID: -4192491875905271157, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0023969484
+      objectReference: {fileID: 0}
+    - target: {fileID: -574607911634951530, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.02239788
+      objectReference: {fileID: 0}
+    - target: {fileID: -574607911634951530, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00044434058
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 26329b45113876e4db6e4fb65d2ec95f,
         type: 3}
       propertyPath: m_Name
       value: boss1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: f662c776cf8fec84ca2623b2402765d1, type: 3}
+    - target: {fileID: 5866666021909216657, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 26329b45113876e4db6e4fb65d2ec95f,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
