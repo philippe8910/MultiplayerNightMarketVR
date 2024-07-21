@@ -9,11 +9,9 @@ using UnityEngine.SceneManagement;
 public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
 {
     public GameObject spawnPlayer = null;
-
-    public GameObject playerPos;
-
     public GameObject player;
     public Transform playerSpawnPoint;
+    public string playerPrefabName = "NetworkPlayer";
 
     private void Start()
     {
@@ -31,7 +29,7 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
         }
 
 
-        if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom && playerPos != null && spawnPlayer == null)
+        if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom && player != null && spawnPlayer == null)
         {
             SpawnPlayer();
             Debug.Log("NetworkPlayerPrefabSpawner");
@@ -40,7 +38,7 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
 
     private void SpawnPlayer()
     {
-        spawnPlayer = PhotonNetwork.Instantiate("NetworkPlayer", playerPos.transform.position, playerPos.transform.rotation);
+        spawnPlayer = PhotonNetwork.Instantiate(playerPrefabName, player.transform.position, player.transform.rotation);
 
         if (spawnPlayer == null)
         {

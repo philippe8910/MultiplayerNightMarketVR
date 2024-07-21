@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30a2d66c6d163941bcf091d120b4425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isComputer: 1
+  isComputer: 0
   photonView: {fileID: 8176575237281616659}
   avatar: {fileID: 1670289060187431845}
   playerPos: {fileID: 0}

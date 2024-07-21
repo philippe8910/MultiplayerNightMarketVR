@@ -20,7 +20,8 @@ public class VRBodySetting : MonoBehaviour
             if (!isComputer)
             {
                 rightHandControllerPos = GameObject.Find("RightHand").transform;
-                leftHandControllerPos = GameObject.Find("LeftHand").transform;   
+                leftHandControllerPos = GameObject.Find("LeftHand").transform;  
+                HMD = Camera.main.transform; 
             }
         }
     }
@@ -30,7 +31,7 @@ public class VRBodySetting : MonoBehaviour
         if(playerPos != null && photonView.IsMine)
             transform.position = playerPos.transform.position;
 
-        if (!photonView.IsMine || isComputer || leftHandControllerPos || rightHandControllerPos == null)
+        if (!photonView.IsMine || isComputer)
             return;
 
         rightHandModelPos.position = rightHandControllerPos.position;
@@ -38,6 +39,9 @@ public class VRBodySetting : MonoBehaviour
 
         leftHandModelPos.position = leftHandControllerPos.position;
         leftHandModelPos.rotation = leftHandControllerPos.rotation;
+
+        headModelPos.position = HMD.position;
+        headModelPos.rotation = HMD.rotation;
         //Debug.Log(PhotonNetwork.CountOfPlayersInRooms);
     }
 }
