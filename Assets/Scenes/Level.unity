@@ -819,6 +819,8 @@ GameObject:
   - component: {fileID: 70330607}
   - component: {fileID: 70330605}
   - component: {fileID: 70330604}
+  - component: {fileID: 70330611}
+  - component: {fileID: 70330612}
   m_Layer: 0
   m_Name: BowPickup (1)
   m_TagString: Untagged
@@ -846,19 +848,7 @@ MonoBehaviour:
       m_Calls: []
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
-        m_MethodName: RequestOwnership
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls: []
@@ -994,6 +984,41 @@ Transform:
   - {fileID: 1460887396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -221.04799, z: -90.00001}
+--- !u!114 &70330611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70330603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 70330605}
+  sceneViewId: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &70330612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70330603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a813004a39e65e441a1ceecb86ef9beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75468626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,6 +3863,8 @@ GameObject:
   - component: {fileID: 208514462}
   - component: {fileID: 208514466}
   - component: {fileID: 208514468}
+  - component: {fileID: 208514469}
+  - component: {fileID: 208514470}
   m_Layer: 0
   m_Name: BowPickup
   m_TagString: Untagged
@@ -3997,22 +4024,45 @@ MonoBehaviour:
       m_Calls: []
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
-        m_MethodName: RequestOwnership
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &208514469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208514461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 208514466}
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &208514470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208514461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a813004a39e65e441a1ceecb86ef9beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &212521982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5405,7 +5455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &308064466
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31309,6 +31359,8 @@ GameObject:
   - component: {fileID: 1776783860}
   - component: {fileID: 1776783858}
   - component: {fileID: 1776783857}
+  - component: {fileID: 1776783864}
+  - component: {fileID: 1776783865}
   m_Layer: 0
   m_Name: BowPickup (2)
   m_TagString: Untagged
@@ -31336,19 +31388,7 @@ MonoBehaviour:
       m_Calls: []
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
-        m_MethodName: RequestOwnership
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls: []
@@ -31484,6 +31524,41 @@ Transform:
   - {fileID: 532870638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -221.04799, z: -90.00001}
+--- !u!114 &1776783864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776783856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 1776783858}
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1776783865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776783856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a813004a39e65e441a1ceecb86ef9beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1780881376
 BoxCollider:
   m_ObjectHideFlags: 0

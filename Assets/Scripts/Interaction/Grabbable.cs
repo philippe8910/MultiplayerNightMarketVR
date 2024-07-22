@@ -4,31 +4,28 @@ using Photon.Pun;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-[RequireComponent(typeof(PhotonView), typeof(Throwable) , typeof(PhotonTransformView))]
+[RequireComponent(typeof(PhotonView), typeof(InteractableHoverEvents))]
 public class Grabbable : MonoBehaviour
 {
-    private Throwable throwable { get => GetComponent<Throwable>();}
-    private Rigidbody rb { get => GetComponent<Rigidbody>();}
+    private InteractableHoverEvents hoverEvents { get => GetComponent<InteractableHoverEvents>();}
     private PhotonView photonView { get => GetComponent<PhotonView>();}
 
 
     void Start()
     {
-        throwable.onPickUp.AddListener(delegate {
+        hoverEvents.onAttachedToHand.AddListener(delegate {
             photonView.RequestOwnership();
-            photonView.RPC("CancelGravityRPC", RpcTarget.All, true);
+            //photonView.RPC("CancelGravityRPC", RpcTarget.All, true);
         });
 
-        throwable.onDetachFromHand.AddListener(delegate {
-            photonView.RPC("CancelGravityRPC", RpcTarget.All, false);
+        hoverEvents.onDetachedFromHand.AddListener(delegate {
+            //photonView.RPC("CancelGravityRPC", RpcTarget.All, false);
         });
     }
 
     [PunRPC]
     public void CancelGravityRPC(bool cancelGravity)
     {
-        //todo sync transform has problem
-        rb.useGravity = !cancelGravity;
         Debug.Log("Gravity is " + (cancelGravity ? "canceled" : "enabled"));
     }
 }
