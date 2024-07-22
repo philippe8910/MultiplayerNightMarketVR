@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
@@ -12,7 +13,7 @@ public class BucketSpawnComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentBucket = Instantiate(bucketPrefab, spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
+        currentBucket = PhotonNetwork.Instantiate("CircleComponent", spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
 
         StartCoroutine(StartDetecting());
     }
@@ -23,7 +24,7 @@ public class BucketSpawnComponent : MonoBehaviour
 
         if(currentBucket.attachedToHand != null && Vector3.Distance(currentBucket.attachedToHand.transform.position, spawnPoint.position) > 1f)
         {
-            currentBucket = Instantiate(bucketPrefab, spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
+            currentBucket = PhotonNetwork.Instantiate("CircleComponent", spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
         }
     }
 }

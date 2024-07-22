@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5304193056552376365}
   - component: {fileID: 4107811293179527233}
   - component: {fileID: 5566999361384118617}
+  - component: {fileID: 984204493838925248}
   m_Layer: 0
   m_Name: SandBag
   m_TagString: SandBag
@@ -288,9 +289,10 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 984204493838925248}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -330,6 +332,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a813004a39e65e441a1ceecb86ef9beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGravity: 1
+--- !u!114 &984204493838925248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627111525880147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 0
 --- !u!1 &3381518156896093563
 GameObject:
   m_ObjectHideFlags: 0
