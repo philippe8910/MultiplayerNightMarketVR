@@ -3,7 +3,17 @@ guid: 4a19067e3145590459be5cc6c84077a8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boss2.001
+    second: {fileID: 2100000, guid: b8bf2628ddf0c204d8c3646306c2a729, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boss2_hair
+    second: {fileID: 2100000, guid: c3dd5db4593c28c46a1c42ab66522290, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
