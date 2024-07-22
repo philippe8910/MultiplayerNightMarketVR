@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
@@ -15,14 +16,14 @@ public class SandBagBoxComponent : MonoBehaviour
     /// </summary>
     void Start()
     {
-        currentSandBag = Instantiate(sandBagPrefab, sandBagSpawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
+        currentSandBag = PhotonNetwork.Instantiate("SandBag", sandBagSpawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
     }
     
     void Update()
     {
         if(Vector3.Distance(currentSandBag.transform.position, sandBagSpawnPoint.position) > 0.3f && currentSandBag.attachedToHand != null)
         {
-            currentSandBag = Instantiate(sandBagPrefab, sandBagSpawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
+            currentSandBag = PhotonNetwork.Instantiate("SandBag", sandBagSpawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
         }
 
     }
