@@ -28,10 +28,7 @@ public class VRBodySetting : MonoBehaviour
 
     private void Update()
     {
-        if(playerPos != null && photonView.IsMine)
-            transform.position = playerPos.transform.position;
-
-        if (!photonView.IsMine || isComputer)
+        if (!photonView.IsMine)
             return;
 
         rightHandModelPos.position = rightHandControllerPos.position;
