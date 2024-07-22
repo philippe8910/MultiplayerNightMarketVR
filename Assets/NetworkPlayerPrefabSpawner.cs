@@ -13,12 +13,6 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
     public Transform playerSpawnPoint;
     public string playerPrefabName = "NetworkPlayer";
 
-    void Awake()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = playerSpawnPoint.position;
-    }
-
     private void Start()
     {
         //todo this is not good to fix lag, 
@@ -31,18 +25,18 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
             Debug.Log("Load Menu Scene");
         }
 
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerSpawnPoint.position;
 
-        if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom && player != null && spawnPlayer == null)
-        {
-            SpawnPlayer();
-            Debug.Log("NetworkPlayerPrefabSpawner");
-        }
+        SpawnPlayer();
     }
 
     private void SpawnPlayer()
     {
         spawnPlayer = PhotonNetwork.Instantiate(playerPrefabName, player.transform.position, player.transform.rotation);
 
+
+        spawnPlayer.transform.parent = player.transform;
         if (spawnPlayer == null)
         {
             Debug.LogError("Failed to spawn player");
