@@ -817,7 +817,6 @@ GameObject:
   - component: {fileID: 70330609}
   - component: {fileID: 70330608}
   - component: {fileID: 70330607}
-  - component: {fileID: 70330606}
   - component: {fileID: 70330605}
   - component: {fileID: 70330604}
   m_Layer: 0
@@ -848,7 +847,7 @@ MonoBehaviour:
   onAttachedToHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 70330606}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
         m_MethodName: RequestOwnership
         m_Mode: 1
@@ -879,29 +878,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &70330606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70330603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 70330605}
-  sceneViewId: 4
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!135 &70330607
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3860,7 +3836,6 @@ GameObject:
   - component: {fileID: 208514464}
   - component: {fileID: 208514463}
   - component: {fileID: 208514462}
-  - component: {fileID: 208514467}
   - component: {fileID: 208514466}
   - component: {fileID: 208514468}
   m_Layer: 0
@@ -4002,29 +3977,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &208514467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208514461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 208514466}
-  sceneViewId: 1
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &208514468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4046,7 +3998,7 @@ MonoBehaviour:
   onAttachedToHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208514467}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
         m_MethodName: RequestOwnership
         m_Mode: 1
@@ -31355,7 +31307,6 @@ GameObject:
   - component: {fileID: 1776783862}
   - component: {fileID: 1776783861}
   - component: {fileID: 1776783860}
-  - component: {fileID: 1776783859}
   - component: {fileID: 1776783858}
   - component: {fileID: 1776783857}
   m_Layer: 0
@@ -31386,7 +31337,7 @@ MonoBehaviour:
   onAttachedToHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1776783859}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
         m_MethodName: RequestOwnership
         m_Mode: 1
@@ -31417,29 +31368,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &1776783859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776783856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 1776783858}
-  sceneViewId: 5
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!135 &1776783860
 SphereCollider:
   m_ObjectHideFlags: 0
