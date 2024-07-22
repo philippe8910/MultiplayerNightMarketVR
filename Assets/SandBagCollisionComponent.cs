@@ -15,6 +15,6 @@ public class SandBagCollisionComponent : MonoBehaviour
     {
         audioSource.Play();
 
-        Destroy(gameObject , 2);
+        //Destroy(gameObject , 2);
     }
 }
