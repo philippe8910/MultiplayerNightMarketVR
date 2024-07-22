@@ -50,8 +50,8 @@ namespace Valve.VR.InteractionSystem
 		{
 			if ( released && inFlight )
 			{
-				prevPosition = transform.position;
-				prevRotation = transform.rotation;
+				prevPosition = transform.localPosition;
+				prevRotation = transform.localRotation;
 				prevVelocity = GetComponent<Rigidbody>().velocity;
 				prevHeadPosition = arrowHeadRB.transform.position;
 				travelledFrames++;
