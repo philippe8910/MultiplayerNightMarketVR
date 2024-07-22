@@ -3660,7 +3660,7 @@ MonoBehaviour:
   _itemPackage: {fileID: 11450054, guid: 98a3ad29136d5c04f8a025adf1cbd704, type: 3}
   useItemPackagePreview: 1
   requireGrabActionToTake: 1
-  requireReleaseActionToReturn: 0
+  requireReleaseActionToReturn: 1
   showTriggerHint: 1
   attachmentFlags: -23
   takeBackItem: 1
@@ -23016,7 +23016,7 @@ MonoBehaviour:
   _itemPackage: {fileID: 11450054, guid: 98a3ad29136d5c04f8a025adf1cbd704, type: 3}
   useItemPackagePreview: 1
   requireGrabActionToTake: 1
-  requireReleaseActionToReturn: 0
+  requireReleaseActionToReturn: 1
   showTriggerHint: 1
   attachmentFlags: -23
   takeBackItem: 1
@@ -27503,7 +27503,7 @@ MonoBehaviour:
   _itemPackage: {fileID: 11450054, guid: 98a3ad29136d5c04f8a025adf1cbd704, type: 3}
   useItemPackagePreview: 1
   requireGrabActionToTake: 1
-  requireReleaseActionToReturn: 0
+  requireReleaseActionToReturn: 1
   showTriggerHint: 1
   attachmentFlags: -23
   takeBackItem: 1
@@ -27601,7 +27601,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1484382805}
   sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -51089,6 +51090,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1495417077566807607, guid: 37ecc763d841b4122a4a70dd82c5caac,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7870588029556514982, guid: 37ecc763d841b4122a4a70dd82c5caac,
         type: 3}
       propertyPath: m_Name
