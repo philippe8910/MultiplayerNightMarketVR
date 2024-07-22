@@ -37960,7 +37960,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 0}
   player: {fileID: 0}
   playerSpawnPoint: {fileID: 1654742196}
-  playerPrefabName: NetworkPlayerNoIK
+  playerPrefabName: NetworkPlayer
 --- !u!4 &2120548598
 Transform:
   m_ObjectHideFlags: 0
