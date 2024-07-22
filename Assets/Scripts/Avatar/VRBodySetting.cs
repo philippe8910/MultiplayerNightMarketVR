@@ -16,7 +16,7 @@ public class VRBodySetting : MonoBehaviour
         if (photonView.IsMine)
         {
             avatar.SetActive(false);
-            playerPos = GameObject.Find("Player");
+            playerPos = GameObject.FindGameObjectWithTag("Player");
             if (!isComputer)
             {
                 rightHandControllerPos = GameObject.Find("RightHand").transform;
@@ -30,6 +30,8 @@ public class VRBodySetting : MonoBehaviour
     {
         if (!photonView.IsMine)
             return;
+
+        transform.position = playerPos.transform.position;
 
         rightHandModelPos.position = rightHandControllerPos.position;
         rightHandModelPos.rotation = rightHandControllerPos.rotation;

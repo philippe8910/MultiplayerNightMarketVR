@@ -35,8 +35,6 @@ public class NetworkPlayerPrefabSpawner : MonoBehaviourPunCallbacks
     {
         spawnPlayer = PhotonNetwork.Instantiate(playerPrefabName, player.transform.position, player.transform.rotation);
 
-
-        spawnPlayer.transform.parent = player.transform;
         if (spawnPlayer == null)
         {
             Debug.LogError("Failed to spawn player");
