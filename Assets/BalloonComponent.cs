@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Photon.Pun;
 using UnityEngine;
 
 public class BalloonComponent : MonoBehaviour
@@ -11,11 +13,13 @@ public class BalloonComponent : MonoBehaviour
     /// touching another rigidbody/collider.
     /// </summary>
     /// <param name="other">The Collision data associated with this collision.</param>
-    void OnCollisionEnter(Collision other)
+    public async void OnCollisionEnter(Collision other)
     {
-        var effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
+        var effect = PhotonNetwork.Instantiate(effectPrefab.name, transform.position, Quaternion.identity);
 
-        Destroy(gameObject);
-        Destroy(effect, 2f);
+        PhotonNetwork.Destroy(gameObject);
+        
+        await Task.Delay(1000);
+        PhotonNetwork.Destroy(effect);
     }
 }
