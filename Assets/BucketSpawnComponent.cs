@@ -14,15 +14,11 @@ public class BucketSpawnComponent : MonoBehaviour
     void Start()
     {
         currentBucket = PhotonNetwork.Instantiate("CircleComponent", spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
-
-        StartCoroutine(StartDetecting());
     }
 
-    IEnumerator StartDetecting()
+    void Update()
     {
-        yield return new WaitForSeconds(1f);
-
-        if(currentBucket.attachedToHand != null && Vector3.Distance(currentBucket.attachedToHand.transform.position, spawnPoint.position) > 1f)
+        if(Vector3.Distance(currentBucket.transform.position, spawnPoint.position) > 0.3f && currentBucket.attachedToHand != null)
         {
             currentBucket = PhotonNetwork.Instantiate("CircleComponent", spawnPoint.position, Quaternion.identity).GetComponent<Interactable>();
         }
