@@ -36,7 +36,7 @@ public class SandBagComponent : MonoBehaviour
     public void Reset()
     {
         isTriggered = false;
-        transform.DOMove(originalPosition, 1f);
-        transform.DORotateQuaternion(originalRotation, 1f);
+        transform.DOMove(originalPosition, 0.1f);
+        transform.DORotateQuaternion(originalRotation, 0.1f);
     }
 }
