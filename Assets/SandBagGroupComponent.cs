@@ -1,13 +1,11 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
-using ExitGames.Client.Photon.StructWrapping;
 using UnityEngine;
 
 public class SandBagGroupComponent : MonoBehaviour
 {
     public SandBagComponent[] sandBagTargets;
-
+    public Animator bossAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +43,7 @@ public class SandBagGroupComponent : MonoBehaviour
         foreach (SandBagComponent sandBag in sandBagTargets)
         {
             sandBag.Reset();
+            bossAnimator.SetInteger("ID" , Random.Range(0,2));
         }
     }
 }
