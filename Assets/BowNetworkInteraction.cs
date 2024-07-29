@@ -14,11 +14,11 @@ public class BowNetworkInteraction : MonoBehaviour
         itemPackageSpawner = GetComponent<ItemPackageSpawner>();
 
         itemPackageSpawner.pickupEvent.AddListener(delegate {
-            animator.Play("PlayerBow");
+            animator.SetBool("Grab", true);
         });
 
         itemPackageSpawner.dropEvent.AddListener(delegate {
-            animator.Play("PlayerIdle");
+            animator.SetBool("Grab", false);
         });
     }
 
