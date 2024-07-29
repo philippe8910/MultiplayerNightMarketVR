@@ -18,6 +18,7 @@ public class BalloonComponent : MonoBehaviour
         var effect = PhotonNetwork.Instantiate(effectPrefab.name, transform.position, Quaternion.identity);
 
         PhotonNetwork.Destroy(gameObject);
+        Destroy(other.gameObject);
         
         await Task.Delay(1000);
         PhotonNetwork.Destroy(effect);
