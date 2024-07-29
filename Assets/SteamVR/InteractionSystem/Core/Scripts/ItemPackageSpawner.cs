@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine.Events;
+using Photon;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -339,7 +340,7 @@ namespace Valve.VR.InteractionSystem
 				RemoveMatchingItemTypesFromHand( ItemPackage.ItemPackageType.TwoHanded, hand.otherHand );
 			}
 
-			spawnedItem = GameObject.Instantiate( itemPackage.itemPrefab );
+			spawnedItem = Instantiate( itemPackage.itemPrefab );
 			spawnedItem.SetActive( true );
 			hand.AttachObject( spawnedItem, grabType, attachmentFlags );
 

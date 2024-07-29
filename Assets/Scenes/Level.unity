@@ -4012,6 +4012,7 @@ GameObject:
   - component: {fileID: 208514464}
   - component: {fileID: 208514463}
   - component: {fileID: 208514462}
+  - component: {fileID: 208514466}
   m_Layer: 0
   m_Name: BowPickup
   m_TagString: Untagged
@@ -4135,6 +4136,19 @@ Transform:
   - {fileID: 946090972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -221.04799, z: -90.00001}
+--- !u!114 &208514466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208514461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24f5f9b68be18c43aab077a3aea29ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!65 &212521982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45097,7 +45111,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 0}
   player: {fileID: 0}
   playerSpawnPoint: {fileID: 1654742196}
-  playerPrefabName: NetworkPlayer
+  playerPrefabName: NetworkPlayerNoIK
 --- !u!4 &2120548598
 Transform:
   m_ObjectHideFlags: 0
