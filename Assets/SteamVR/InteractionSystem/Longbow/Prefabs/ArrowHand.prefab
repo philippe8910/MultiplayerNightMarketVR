@@ -251,10 +251,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 173732, guid: 81fc1450441aca64e8cc1a0e14b1aa77, type: 3}
   arrowNockTransform: {fileID: 413922}
-  nockDistance: 0.01
+  nockDistance: 0.08
   lerpCompleteDistance: 0.07
-  rotationLerpThreshold: 0.01
-  positionLerpThreshold: 0.01
+  rotationLerpThreshold: 0.03
+  positionLerpThreshold: 0.03
   arrowSpawnSound: {fileID: 11498220}
   maxArrowCount: 10
 --- !u!114 &11426438

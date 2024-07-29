@@ -52,7 +52,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2161779369441494854
 Transform:
   m_ObjectHideFlags: 0
@@ -61,13 +61,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544446658098068307}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.67633605, w: 0.73659325}
-  m_LocalPosition: {x: -0.03432411, y: 0.01, z: 0.033}
+  m_LocalRotation: {x: 0.3544198, y: 0.23596783, z: -0.009461656, w: 0.9047742}
+  m_LocalPosition: {x: -0.01875069, y: 0.087974384, z: -0.030586906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4095321249033753474}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 85.116}
+  m_LocalEulerAnglesHint: {x: 40.226, y: 33.4, z: 11.341}
 --- !u!33 &7244087364746635058
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -235,7 +235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: Grab
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

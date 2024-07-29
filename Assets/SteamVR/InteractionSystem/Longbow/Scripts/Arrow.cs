@@ -89,8 +89,8 @@ namespace Valve.VR.InteractionSystem
 			}
 
 			travelledFrames = 0;
-			prevPosition = transform.position;
-			prevRotation = transform.rotation;
+			prevPosition = transform.localPosition;
+			prevRotation = transform.localRotation;
 			prevHeadPosition = arrowHeadRB.transform.position;
 			prevVelocity = GetComponent<Rigidbody>().velocity;
 
