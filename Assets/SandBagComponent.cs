@@ -35,8 +35,10 @@ public class SandBagComponent : MonoBehaviour
 
     public void Reset()
     {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+
         isTriggered = false;
-        transform.DOMove(originalPosition, 0.1f);
-        transform.DORotateQuaternion(originalRotation, 0.1f);
+        transform.position = originalPosition;
+        transform.rotation = originalRotation;
     }
 }
