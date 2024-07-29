@@ -9,25 +9,28 @@ public class Grabbable : MonoBehaviour
 {
     private Throwable throwable { get => GetComponent<Throwable>();}
     private PhotonView photonView { get => GetComponent<PhotonView>();}
+    private Rigidbody rigidbody { get => GetComponent<Rigidbody>();}
 
     public bool isGravity;
     void Start()
     {
         GetComponent<Rigidbody>().useGravity = isGravity;
-        
+
+
         throwable.onPickUp.AddListener(delegate {
             photonView.RequestOwnership();
-            //photonView.RPC("CancelGravityRPC", RpcTarget.All, true);
+            photonView.RPC("CancelGravityRPC", RpcTarget.All, true);
         });
 
         throwable.onDetachFromHand.AddListener(delegate {
-            //photonView.RPC("CancelGravityRPC", RpcTarget.All, false);
+            photonView.RPC("CancelGravityRPC", RpcTarget.All, false);
         });
     }
 
     [PunRPC]
     public void CancelGravityRPC(bool cancelGravity)
     {
+        rigidbody.useGravity = !cancelGravity;
         Debug.Log("Gravity is " + (cancelGravity ? "canceled" : "enabled"));
     }
 }
