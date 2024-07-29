@@ -44,14 +44,23 @@ namespace Valve.VR.InteractionSystem
 			Physics.IgnoreCollision( shaftRB.GetComponent<Collider>(), Player.instance.headCollider );
 		}
 
+		void Update()
+		{
+			if(released)
+				return;
+
+			transform.localPosition = Vector3.zero;
+			transform.localRotation = Quaternion.identity;
+		}
+
 
 		//-------------------------------------------------
 		void FixedUpdate()
 		{
 			if ( released && inFlight )
 			{
-				prevPosition = transform.localPosition;
-				prevRotation = transform.localRotation;
+				prevPosition = transform.position;
+				prevRotation = transform.rotation;
 				prevVelocity = GetComponent<Rigidbody>().velocity;
 				prevHeadPosition = arrowHeadRB.transform.position;
 				travelledFrames++;
@@ -91,7 +100,7 @@ namespace Valve.VR.InteractionSystem
 			travelledFrames = 0;
 			prevPosition = transform.localPosition;
 			prevRotation = transform.localRotation;
-			prevHeadPosition = arrowHeadRB.transform.position;
+			prevHeadPosition = arrowHeadRB.transform.localPosition;
 			prevVelocity = GetComponent<Rigidbody>().velocity;
 
             SetCollisionMode(CollisionDetectionMode.ContinuousDynamic);
